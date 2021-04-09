@@ -22,6 +22,10 @@ DEVICE_PATH := device/sony/pdx234
 # Display
 TARGET_SCREEN_DENSITY := 420
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pdx234
+TARGET_RECOVERY_DEVICE_MODULES := libinit_pdx234
+
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/sony/pdx234.config
 
