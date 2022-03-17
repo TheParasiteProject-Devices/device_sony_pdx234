@@ -3,4 +3,8 @@
     <!-- Location of physical charger port -->
     <dimen name="physical_charger_port_location_normalized_x">0.5</dimen>
     <dimen name="physical_charger_port_location_normalized_y">1</dimen>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">5</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">5</integer>
 </resources>
