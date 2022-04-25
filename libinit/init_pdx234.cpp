@@ -54,15 +54,23 @@ void property_override(char const prop[], char const value[], bool add = true) {
 }
 
 void full_property_override(const std::string &prop, const char value[], const bool product) {
-    const int prop_count = 6;
+    const int prop_count = 8;
     const std::vector<std::string> prop_types
-        {"", "odm.", "product.", "system.", "system_ext.", "vendor."};
+        {"", "bootimage.", "odm.", "product.", "system.", "system_ext.", "vendor.", "vendor_dlkm.", "odm_dlkm."};
 
     for (int i = 0; i < prop_count; i++) {
         std::string prop_name = (product ? "ro.product." : "ro.") + prop_types[i] + prop;
         property_override(prop_name.c_str(), value);
     }
 }
+
+static const char *device_prop_key[] =
+        { "brand", "device", "model", "cert", "name",
+          "marketname", "manufacturer", "mod_device", nullptr };
+
+static const char *device_prop_val[] =
+        { "Sony", "pdx234", "Pdx234", "Pdx234", "pdx234",
+          "Xperia 1 V", "Sony", "pdx234", nullptr };
 
 /* From Magisk@native/jni/magiskhide/hide_utils.c */
 static const char *cts_prop_key[] =
@@ -97,47 +105,42 @@ static const char *build_keys_props[] =
 };
 
 static void workaround_cts_properties() {
-	// Hide all sensitive props
-	for (int i = 0; cts_prop_key[i]; ++i) {
-		property_override(cts_prop_key[i], cts_prop_val[i]);
-	}
-	for (int i = 0; cts_late_prop_key[i]; ++i) {
-		property_override(cts_late_prop_key[i], cts_late_prop_val[i]);
-	}
+    // Hide all sensitive props
+    for (int i = 0; cts_prop_key[i]; ++i) {
+        property_override(cts_prop_key[i], cts_prop_val[i]);
+    }
+    for (int i = 0; cts_late_prop_key[i]; ++i) {
+        property_override(cts_late_prop_key[i], cts_late_prop_val[i]);
+    }
 }
 
 void vendor_load_properties() {
-    const bool is_global = (GetProperty("ro.boot.hwc", "UNKNOWN") == "GLOBAL");
-    const bool is_pro = (GetProperty("ro.boot.product.hardware.sku", "UNKNOWN") != "std");
+    const char *fingerprint = "XQ-DQ72-user 13 67.0.A.4.79 067000A004007900521143226 release-keys";
+    const char *description = "Sony/XQ-DQ72/XQ-DQ72:13/67.0.A.4.79/067000A004007900521143226:user/release-keys";
 
-    std::string marketname =
-       !(!is_global && is_pro) ? "Redmi Note 10 Pro" : "Redmi Note 10 Pro Max";
-    const std::string mod_device = is_global ? "sweet_eea_global" : "sweetin_in_global";
+    full_property_override("build.fingerprint", fingerprint, false);
+    full_property_override("build.description", description, false);
 
-    for (int i = 0; i <= 1; i++) {
-        full_property_override("model", is_global ? "M2101K6G" :
-            (is_pro ? "M2101K6I" : "M2101K6P"), i);
-        full_property_override("device", is_global ? "sweet" : "sweetin", i);
-        full_property_override("name", is_global ? "sweet" : "sweetin", i);
+    for (int i = 0; device_prop_key[i]; ++i) {
+        full_property_override(device_prop_key[i], device_prop_val[i], false);
+        full_property_override(device_prop_key[i], device_prop_val[i], true);
     }
-
-    property_override("ro.product.marketname", marketname.c_str());
-    property_override("ro.product.mod_device", mod_device.c_str());
+    full_property_override("build.product", "pdx234", false);
 
     /* Workaround CTS */
     workaround_cts_properties();
 
     /* Spoof Build keys */
-	for (int i = 0; build_keys_props[i]; ++i) {
-		property_override(build_keys_props[i], "release-keys");
-	}
+    for (int i = 0; build_keys_props[i]; ++i) {
+        property_override(build_keys_props[i], "release-keys");
+    }
 
     // Enable UI blur
     property_override("ro.surface_flinger.supports_background_blur", "1");
 
     // Set dalvik heap configuration
     std::string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
-			heapmaxfree, heaptargetutilization;
+            heapmaxfree, heaptargetutilization;
 
     struct sysinfo sys;
     sysinfo(&sys);
