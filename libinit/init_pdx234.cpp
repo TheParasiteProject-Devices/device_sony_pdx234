@@ -131,6 +131,9 @@ void vendor_load_properties() {
 
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
+    
+    // Set product name to show when connect through usb
+    property_override("vendor.usb.product_string", GetProperty("ro.product.marketname", "").c_str());
 
     /* Workaround CTS */
     workaround_cts_properties();
