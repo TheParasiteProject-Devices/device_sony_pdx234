@@ -85,6 +85,12 @@ void vendor_load_properties() {
     }
     full_property_override("build.product", "XQ-DQ72", false);
 
+    // Set hardware revision
+    property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
+    
+    // Set product name to show when connect through usb
+    property_override("vendor.usb.product_string", GetProperty("ro.product.marketname", "").c_str());
+
     // Enable UI blur
     property_override("ro.surface_flinger.supports_background_blur", "1");
 
