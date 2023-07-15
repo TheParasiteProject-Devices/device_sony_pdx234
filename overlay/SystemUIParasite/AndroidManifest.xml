@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.android.systemui.parasite.overlay.sony_pdx234">
+    <overlay android:targetPackage="com.android.systemui" android:isStatic="true" />
+</manifest>
