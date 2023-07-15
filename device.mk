@@ -42,6 +42,9 @@ PRODUCT_PACKAGES += \
     SonyPDX234SystemUIRes \
     SonyPDX234FrameworksRes
 
+PRODUCT_PACKAGES += \
+    SystemUIParasiteResPdx234
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
