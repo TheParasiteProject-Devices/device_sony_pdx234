@@ -21,18 +21,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelExperience stuffs.
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-IS_PHONE := true
+# Additional Pixel stuffs
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_INCLUDE_CAMERA_GO := true
+TARGET_SUPPORTS_LILY_EXPERIENCE := true
+TARGET_NOT_SUPPORTS_GOOGLE_BATTERY := true
+TARGET_FLATTEN_APEX := false
+TARGET_GBOARD_KEY_HEIGHT := 1.1
+$(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
-PRODUCT_NAME := lineage_pdx234
+TARGET_BOOT_ANIMATION_RES := 1440
+
+PRODUCT_NAME := aosp_pdx234
 PRODUCT_DEVICE := pdx234
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Pdx234
 
-PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
+PRODUCT_GMS_CLIENTID_BASE := android-google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="XQ-DQ72-user 13 67.0.A.4.79 067000A004007900521143226 release-keys" \
