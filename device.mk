@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     PixelConfigOverlayPdx234 \
+    SettingsParasiteResPdx234 \
     SystemUIParasiteResPdx234
 
 DEVICE_PACKAGE_OVERLAYS += \
