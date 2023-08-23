@@ -135,6 +135,9 @@ void vendor_load_properties() {
     // Set product name to show when connect through usb
     property_override("vendor.usb.product_string", GetProperty("ro.product.marketname", "").c_str());
 
+    // Set product name to show when connect through bluetooth
+    property_override("bluetooth.device.default_name", GetProperty("ro.product.marketname", "").c_str());
+
     /* Workaround CTS */
     workaround_cts_properties();
 
