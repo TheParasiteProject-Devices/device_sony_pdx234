@@ -46,7 +46,8 @@ PRODUCT_PACKAGES += \
     SonyPDX234SettingsRes \
     SonyPDX234SettingsProviderRes \
     SonyPDX234SystemUIRes \
-    SonyPDX234NfcNciRes
+    SonyPDX234NfcNciRes \
+    SonyPdx234WifiRes
 
 PRODUCT_PACKAGES += \
     SettingsParasiteResPdx234 \
