@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
     SonyPDX234FrameworksRes
 
 PRODUCT_PACKAGES += \
+    SettingsParasiteResPdx234 \
     SystemUIParasiteResPdx234
 
 DEVICE_PACKAGE_OVERLAYS += \
