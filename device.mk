@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     SonyPDX234SettingsRes \
     SonyPDX234SettingsProviderRes \
     SonyPDX234SystemUIRes \
+    SonyPdx234WifiRes \
     SonyPDX234FrameworksRes
 
 PRODUCT_PACKAGES += \
