@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     SonyPDX234NfcNciRes
 
 PRODUCT_PACKAGES += \
+    SettingsParasiteResPdx234 \
     SystemUIParasiteResPdx234
 
 DEVICE_PACKAGE_OVERLAYS += \
