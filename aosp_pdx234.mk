@@ -40,6 +40,8 @@ $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1440
 
+TARGET_USES_AOSP_RECOVERY := true
+
 PRODUCT_NAME := aosp_pdx234
 PRODUCT_DEVICE := pdx234
 PRODUCT_MANUFACTURER := Sony
