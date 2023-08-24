@@ -32,6 +32,7 @@
 #include <unistd.h>
 #include <vector>
 
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -138,12 +139,14 @@ void vendor_load_properties() {
     // Set product name to show when connect through bluetooth
     property_override("bluetooth.device.default_name", GetProperty("ro.product.marketname", "").c_str());
 
-    /* Workaround CTS */
-    workaround_cts_properties();
+    if (access("/system/bin/recovery", F_OK) != 0) {
+        /* Workaround CTS */
+        workaround_cts_properties();
 
-    /* Spoof Build keys */
-    for (int i = 0; build_keys_props[i]; ++i) {
-        property_override(build_keys_props[i], "release-keys");
+        /* Spoof Build keys */
+        for (int i = 0; build_keys_props[i]; ++i) {
+            property_override(build_keys_props[i], "release-keys");
+        }
     }
 
     // Enable UI blur
