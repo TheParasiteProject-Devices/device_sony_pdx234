@@ -23,4 +23,9 @@
         <item>1105</item> <!--item>sensorLocationY</item-->
         <item>240</item> <!--item>sensorRadius</item-->
     </array>
+
+    <!-- Height of the status bar -->
+    <dimen name="status_bar_height_default">115.0px</dimen>
+    <dimen name="status_bar_height_portrait">115.0px</dimen>
+    <dimen name="status_bar_height_landscape">14dip</dimen>
 </resources>
