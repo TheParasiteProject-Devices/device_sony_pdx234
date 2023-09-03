@@ -29,8 +29,5 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_pdx234
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
-# Props
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
 # inherit from the proprietary version
 -include vendor/sony/pdx234/BoardConfigVendor.mk
