@@ -29,6 +29,8 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+TARGET_CHARGER_RESOURCE_COPY_OUT := $(TARGET_COPY_OUT_VENDOR)
+
 # Additional Pixel stuffs
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_CAMERA_GO := true
