@@ -1,1 +1,1 @@
-require board=kalama|pdx234|XQ-DQ72
+require board=kalama|pdx234|XQ-DQ44|XQ-DQ54|XQ-DQ62|XQ-DQ72|SO-51D|SOG10|A301SO
