@@ -118,8 +118,8 @@ static void workaround_cts_properties() {
 }
 
 void vendor_load_properties() {
-    const char *fingerprint = "XQ-DQ72-user 13 67.0.A.4.79 067000A004007900521143226 release-keys";
-    const char *description = "Sony/XQ-DQ72/XQ-DQ72:13/67.0.A.4.79/067000A004007900521143226:user/release-keys";
+    const char *fingerprint = "barbet-user 13 TQ3A.230901.001.C2 10753682 release-keys";
+    const char *description = "google/barbet/barbet:13/TQ3A.230901.001.C2/10753682:user/release-keys";
 
     full_property_override("build.fingerprint", fingerprint, false);
     full_property_override("build.description", description, false);
