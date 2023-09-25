@@ -1,6 +1,6 @@
 # Fingerprint
 persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_location=1096|1105|240|local:131
+persist.vendor.fingerprint.sensor_location=1096|1152|240|local:131
 
 # Smooth display
 ro.surface_flinger.set_idle_timer_ms=4000
