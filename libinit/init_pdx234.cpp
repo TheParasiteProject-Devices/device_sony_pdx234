@@ -139,6 +139,9 @@ void vendor_load_properties() {
     // Set product name to show when connect through bluetooth
     property_override("bluetooth.device.default_name", GetProperty("ro.product.marketname", "").c_str());
 
+    // Set product name to SOMC specific prop
+    property_override("ro.semc.product.name", GetProperty("ro.product.marketname", "").c_str());
+
     if (access("/system/bin/recovery", F_OK) != 0) {
         /* Workaround CTS */
         workaround_cts_properties();
