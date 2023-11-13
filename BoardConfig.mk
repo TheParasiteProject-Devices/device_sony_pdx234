@@ -30,6 +30,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_pdx234
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # Props
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # inherit from the proprietary version
