@@ -30,6 +30,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_pdx234
 TARGET_KERNEL_CONFIG += vendor/sony/pdx234.config
 
 # Props
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery

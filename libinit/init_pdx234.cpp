@@ -82,4 +82,9 @@ void vendor_load_properties() {
         full_property_override(device_prop_key[i], device_prop_val[i], true);
     }
     full_property_override("build.product", "XQ-DQ72", false);
+
+    // Set SOMC specific prop
+    property_override("ro.semc.product.model", GetProperty("ro.product.device", "").c_str());
+    property_override("ro.semc.product.name", GetProperty("ro.product.marketname", "").c_str());
+    property_override("ro.semc.version.sw_type", GetProperty("ro.build.type", "").c_str());
 }
