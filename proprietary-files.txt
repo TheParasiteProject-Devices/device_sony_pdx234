@@ -27,7 +27,6 @@ vendor/etc/zoom_noise_reduction/znr_parameter.xml
 vendor/etc/zoom_noise_reduction/znr_parameter_back.xml
 
 # Camera
-# Camera
 vendor/bin/hw/vendor.somc.hardware.camera.provider@1.0-service
 vendor/camera/CAMINO_FW_DATA_AF_0x0104.dat
 vendor/camera/CAMINO_FW_DATA_OIS_0x0106.dat
@@ -620,3 +619,5 @@ vendor/etc/wifi/bdwlan.e30;SYMLINK=vendor/firmware/kiwi/bdwlan.e30
 vendor/etc/wifi/bdwlan.e31;SYMLINK=vendor/firmware/kiwi/bdwlan.e31
 vendor/etc/wifi/regdb.bin;SYMLINK=vendor/firmware/kiwi/regdb.bin
 vendor/etc/wifi/wifi_txpower.conf
+
+# Pinned section
