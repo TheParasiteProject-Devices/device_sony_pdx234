@@ -9,7 +9,7 @@ The Xperia 1 V (Codenamed "pdx234") is a flagship smartphone from Sony released 
 | Chipset                 | Qualcomm® Snapdragon® 8 Gen 2 5G (4 nm)                                                                      |
 | CPU                     | Octa-Core (1x 3.2 GHz Cortex-X3 & 2x 2.8 GHz Cortex-A715 & 2x 2.8 GHz Cortex-A710 & 3x 2.0 GHz Cortex-A510)  |
 | GPU                     | Adreno 740                                                                                                   |
-| Memory                  | 12 GB LPDDR5X RAM                                                                                            |
+| Memory                  | 12/16 GB LPDDR5X RAM                                                                                         |
 | Shipped Android Version | 13                                                                                                           |
 | Storage                 | 256/512 GB UFS 4.0 (Expandable with Micro SDCard)                                                            |
 | SIM                     | Dual SIM (2x Nano-SIMs, 1x eSIM)                                                                             |
