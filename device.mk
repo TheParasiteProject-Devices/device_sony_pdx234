@@ -61,5 +61,8 @@ include $(LOCAL_PATH)/properties.mk
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# XperiaModules
+$(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/sony/pdx234/pdx234-vendor.mk)
