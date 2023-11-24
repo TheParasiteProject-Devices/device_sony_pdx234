@@ -64,5 +64,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # XperiaModules
 $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
 
+# Sony Extra
+TARGET_SHIPS_SONY_CAMERA := false
+TARGET_SONY_EXTRA_PATH := vendor/sony/extra-yodo
+$(call inherit-product-if-exists, $(TARGET_SONY_EXTRA_PATH)/extra.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/sony/pdx234/pdx234-vendor.mk)
