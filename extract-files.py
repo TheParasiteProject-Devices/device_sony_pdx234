@@ -38,6 +38,16 @@ blob_fixups: blob_fixups_user_type = {
     ),
     'vendor/lib64/camx.provider-impl.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/etc/libnfc-nci.conf': blob_fixup()
+    .regex_replace(
+        'NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'
+    ),
+    'vendor/etc/libnfc-nxp.conf': blob_fixup()
+    .regex_replace(
+        '(NXPLOG_.*_LOGLEVEL)=0x03', '\\0x03=0x02'
+    ).regex_replace(
+        'NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'
+    ),
 }
 
 module = ExtractUtilsModule(
