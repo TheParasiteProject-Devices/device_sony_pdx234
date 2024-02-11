@@ -32,9 +32,5 @@ TARGET_KERNEL_CONFIG += vendor/sony/pdx234.config
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
-# Props
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
 # inherit from the proprietary version
 -include vendor/sony/pdx234/BoardConfigVendor.mk
