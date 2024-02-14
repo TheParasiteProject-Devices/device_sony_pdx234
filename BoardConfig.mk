@@ -32,5 +32,8 @@ TARGET_KERNEL_CONFIG += vendor/sony/pdx234.config
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := pdx234,XQ-DQ44,XQ-DQ54,XQ-DQ62,XQ-DQ72,SO-51D,SOG10,A301SO
+
 # inherit from the proprietary version
 -include vendor/sony/pdx234/BoardConfigVendor.mk
