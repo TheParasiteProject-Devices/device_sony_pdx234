@@ -37,7 +37,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := pdx234,XQ-DQ72
+TARGET_OTA_ASSERT_DEVICE := pdx234,XQ-DQ44,XQ-DQ54,XQ-DQ62,XQ-DQ72,SO-51D,SOG10,A301SO
 
 # inherit from the proprietary version
 -include vendor/sony/pdx234/BoardConfigVendor.mk
