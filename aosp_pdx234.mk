@@ -39,7 +39,7 @@ TARGET_SUPPORTS_GOOGLE_BATTERY := false
 TARGET_FLATTEN_APEX := false
 TARGET_GBOARD_KEY_HEIGHT := 1.1
 
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.google.android.apps.cameralite \
     persist.camera.privapp.list=com.google.android.apps.cameralite
 
