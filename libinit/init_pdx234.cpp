@@ -118,8 +118,8 @@ static void workaround_cts_properties() {
 }
 
 void vendor_load_properties() {
-    const char *fingerprint = "Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.208/067001A002020800521143226:user/release-keys";
-    const char *description = "XQ-DQ72-user 14 67.1.A.2.208 067001A002020800521143226 release-keys";
+    const char *fingerprint = "Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.220/067001A002022000521143226:user/release-keys";
+    const char *description = "XQ-DQ72-user 14 67.1.A.2.220 067001A002022000521143226 release-keys";
 
     full_property_override("build.fingerprint", fingerprint, false);
     full_property_override("build.description", description, false);
