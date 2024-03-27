@@ -73,50 +73,6 @@ static const char *device_prop_val[] =
         { "Sony", "XQ-DQ72", "XQ-DQ72", "XQ-DQ72", "XQ-DQ72",
           "Xperia 1 V", "Sony", "XQ-DQ72", nullptr };
 
-/* From Magisk@native/jni/magiskhide/hide_utils.c */
-static const char *cts_prop_key[] =
-        { "ro.boot.vbmeta.device_state", "ro.boot.verifiedbootstate", "ro.boot.flash.locked",
-          "ro.boot.veritymode", "ro.boot.warranty_bit", "ro.warranty_bit",
-          "ro.debuggable", "ro.secure", "ro.build.type", "ro.build.tags",
-          "ro.oem_unlock_supported",
-          "ro.vendor.boot.warranty_bit", "ro.vendor.warranty_bit",
-          "vendor.boot.vbmeta.device_state", nullptr };
-
-static const char *cts_prop_val[] =
-        { "locked", "green", "1",
-          "enforcing", "0", "0",
-          "0", "1", "user", "release-keys",
-          "0",
-          "0", "0",
-          "locked", nullptr };
-
-static const char *cts_late_prop_key[] =
-        { "vendor.boot.verifiedbootstate", nullptr };
-
-static const char *cts_late_prop_val[] =
-        { "green", nullptr };
-
-static const char *build_keys_props[] =
-{
-    "ro.build.tags",
-    "ro.odm.build.tags",
-    "ro.product.build.tags",
-    "ro.system.build.tags",
-    "ro.system_ext.build.tags",
-    "ro.vendor.build.tags",
-    nullptr
-};
-
-static void workaround_cts_properties() {
-    // Hide all sensitive props
-    for (int i = 0; cts_prop_key[i]; ++i) {
-        property_override(cts_prop_key[i], cts_prop_val[i]);
-    }
-    for (int i = 0; cts_late_prop_key[i]; ++i) {
-        property_override(cts_late_prop_key[i], cts_late_prop_val[i]);
-    }
-}
-
 void vendor_load_properties() {
     const char *fingerprint = "Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.220/067001A002022000521143226:user/release-keys";
     const char *description = "XQ-DQ72-user 14 67.1.A.2.220 067001A002022000521143226 release-keys";
@@ -141,18 +97,6 @@ void vendor_load_properties() {
 
     // Set product name to SOMC specific prop
     property_override("ro.semc.product.name", GetProperty("ro.product.marketname", "").c_str());
-
-    if (access("/system/bin/recovery", F_OK) != 0) {
-        /* Workaround CTS */
-        workaround_cts_properties();
-
-        /* Spoof Build keys */
-        for (int i = 0; build_keys_props[i]; ++i) {
-            property_override(build_keys_props[i], "release-keys");
-        }
-        
-        property_override("ro.product.first_api_level", "21");
-    }
 
     // Enable UI blur
     property_override("ro.launcher.blur.appLaunch", "1");
