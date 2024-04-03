@@ -21,31 +21,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common PixelExperience stuffs.
+# Inherit some common TheParasiteProject stuffs.
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_CALL_RECORDING := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
 TARGET_CHARGER_RESOURCE_COPY_OUT := $(TARGET_COPY_OUT_VENDOR)
-
-# Additional Pixel stuffs
 TARGET_INCLUDE_CARRIER_SERVICES := true
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_PIXEL_EUICC := true
 TARGET_INCLUDE_CAMERA_GO := true
 TARGET_SUPPORTS_LILY_EXPERIENCE := false
 TARGET_SUPPORTS_GOOGLE_BATTERY := false
-TARGET_FLATTEN_APEX := false
 TARGET_GBOARD_KEY_HEIGHT := 1.1
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.google.android.apps.cameralite \
     persist.camera.privapp.list=com.google.android.apps.cameralite
 
-$(call inherit-product-if-exists, vendor/google/pixel-additional/config.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1440
 
@@ -60,7 +55,7 @@ PRODUCT_MODEL := XQ-DQ72
 PRODUCT_SYSTEM_NAME := XQ-DQ72
 PRODUCT_SYSTEM_DEVICE := XQ-DQ72
 
-PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
+PRODUCT_GMS_CLIENTID_BASE := android-google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
