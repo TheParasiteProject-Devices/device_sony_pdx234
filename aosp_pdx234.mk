@@ -45,7 +45,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.google.android.apps.cameralite \
     persist.camera.privapp.list=com.google.android.apps.cameralite
 
-$(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel-additional/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1440
 
