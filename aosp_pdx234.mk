@@ -31,14 +31,8 @@ TARGET_CHARGER_RESOURCE_COPY_OUT := $(TARGET_COPY_OUT_VENDOR)
 TARGET_INCLUDE_CARRIER_SERVICES := true
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_PIXEL_EUICC := true
-TARGET_INCLUDE_CAMERA_GO := true
-TARGET_SUPPORTS_LILY_EXPERIENCE := false
 TARGET_SUPPORTS_GOOGLE_BATTERY := false
 TARGET_GBOARD_KEY_HEIGHT := 1.1
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.google.android.apps.cameralite \
-    persist.camera.privapp.list=com.google.android.apps.cameralite
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
