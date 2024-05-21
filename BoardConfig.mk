@@ -19,6 +19,9 @@
 
 DEVICE_PATH := device/sony/pdx234
 
+# Board Info
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
