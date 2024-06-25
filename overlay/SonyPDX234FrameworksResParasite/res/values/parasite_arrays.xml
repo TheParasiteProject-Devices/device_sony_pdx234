@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- X-Reality Engine mode presets -->
+    <integer-array name="config_xRealityColorModePresets">
+        <item>235</item> <!-- X_REALITY_RED   -->
+        <item>238</item> <!-- X_REALITY_GREEN   -->
+        <item>238</item> <!-- X_REALITY_BLUE -->
+        <item>0</item> <!-- X_REALITY_HUE -->
+        <item>275</item> <!-- X_REALITY_CONT -->
+        <item>258</item> <!-- X_REALITY_VAL -->
+        <item>233</item> <!-- X_REALITY_SAT -->
+    </integer-array>
+</resources>

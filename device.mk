@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     SonyPDX234FrameworksRes
 
 PRODUCT_PACKAGES += \
+    SonyPDX234FrameworksResParasite \
     SettingsParasiteResPdx234 \
     SystemUIParasiteResPdx234
 
