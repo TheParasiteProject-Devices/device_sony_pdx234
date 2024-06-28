@@ -67,7 +67,7 @@ static const char *device_prop_key[] =
           "marketname", "manufacturer", "mod_device", nullptr };
 
 static const char *device_prop_val[] =
-        { "Sony", "XQ-DQ72", "XQ-DQ72", "XQ-DQ72", "XQ-DQ72",
+        { "Sony", "XQ-DQ72", "Xperia 1 V", "XQ-DQ72", "XQ-DQ72",
           "Xperia 1 V", "Sony", "XQ-DQ72", nullptr };
 
 void vendor_load_properties() {
