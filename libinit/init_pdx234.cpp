@@ -67,12 +67,12 @@ static const char *device_prop_key[] =
           "marketname", "manufacturer", "mod_device", nullptr };
 
 static const char *device_prop_val[] =
-        { "Sony", "XQ-DQ72", "Xperia 1 V", "XQ-DQ72", "XQ-DQ72",
-          "Xperia 1 V", "Sony", "XQ-DQ72", nullptr };
+        { "Sony", "XQ-DQ54", "Xperia 1 V", "XQ-DQ54", "XQ-DQ54_EEA",
+          "Xperia 1 V", "Sony", "XQ-DQ54", nullptr };
 
 void vendor_load_properties() {
-    const char *fingerprint = "Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.208/067001A002020800521143226:user/release-keys";
-    const char *description = "XQ-DQ72-user 14 67.1.A.2.208 067001A002020800521143226 release-keys";
+    const char *fingerprint = "Sony/XQ-DQ54_EEA/XQ-DQ54:14/67.1.A.2.307/067001A002030700521143226:user/release-keys";
+    const char *description = "XQ-DQ54_EEA-user 14 67.1.A.2.307 067001A002030700521143226 release-keys";
 
     full_property_override("build.fingerprint", fingerprint, false);
     full_property_override("build.description", description, false);
@@ -81,7 +81,7 @@ void vendor_load_properties() {
         full_property_override(device_prop_key[i], device_prop_val[i], false);
         full_property_override(device_prop_key[i], device_prop_val[i], true);
     }
-    full_property_override("build.product", "XQ-DQ72", false);
+    full_property_override("build.product", "XQ-DQ54_EEA", false);
 
     // Set SOMC specific prop
     property_override("ro.semc.product.model", GetProperty("ro.product.device", "").c_str());
