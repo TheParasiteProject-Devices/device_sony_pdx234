@@ -44,12 +44,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 IS_PHONE := true
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-    DeviceName=XQ-DQ72 \
-    DeviceProduct=XQ-DQ72 \
-    SystemDevice=XQ-DQ72 \
-    SystemName=XQ-DQ72 \
-    BuildFingerprint=Sony/XQ-DQ72/XQ-DQ72:15/67.2.A.3.115/067002A003011500521143226:user/release-keys \
-    BuildDesc="XQ-DQ72-user 15 67.2.A.3.115 067002A003011500521143226 release-keys"
+    DeviceName=XQ-DQ54 \
+    DeviceProduct=XQ-DQ54_EEA \
+    SystemDevice=XQ-DQ54 \
+    SystemName=XQ-DQ54_EEA \
+    BuildFingerprint=Sony/XQ-DQ54_EEA/XQ-DQ54:14/67.1.A.2.307/067001A002030700521143226:user/release-keys \
+    BuildDesc="XQ-DQ54_EEA-user 14 67.1.A.2.307 067001A002030700521143226 release-keys"
 
 PRODUCT_NAME := lineage_pdx234
 PRODUCT_DEVICE := pdx234
@@ -57,7 +57,7 @@ PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia 1 V
 
-PRODUCT_SYSTEM_NAME := XQ-DQ72
-PRODUCT_SYSTEM_DEVICE := XQ-DQ72
+PRODUCT_SYSTEM_NAME := XQ-DQ54_EEA
+PRODUCT_SYSTEM_DEVICE := XQ-DQ54
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
