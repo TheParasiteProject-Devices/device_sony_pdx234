@@ -6,7 +6,7 @@
     <!-- The properties of the face auth camera -->
     <integer-array name="config_face_auth_props">
         <item>320</item> <!-- sensorLocationX -->
-        <item>@null</item> <!-- sensorLocationY -->
+        <item>0</item> <!-- sensorLocationY -->
         <item>40</item> <!--sensorRadius -->
     </integer-array>
 </resources>
