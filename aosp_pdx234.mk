@@ -34,6 +34,7 @@ TARGET_INCLUDE_PIXEL_EUICC := true
 TARGET_SUPPORTS_GOOGLE_BATTERY := false
 TARGET_GBOARD_KEY_HEIGHT := 1.1
 TARGET_EEA_V2_DEVICE := true
+TARGET_SUPPORTS_DSE_CHOICE_SCREEN := true
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
