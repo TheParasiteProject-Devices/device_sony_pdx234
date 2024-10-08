@@ -7,6 +7,7 @@
 
 function vendor_imports() {
     cat <<EOF >>"$1"
+        "hardware/qcom-caf/common/libqti-perfd-client",
         "hardware/qcom-caf/sm8550",
         "hardware/qcom-caf/wlan",
         "hardware/sony",
