@@ -221,8 +221,8 @@ vendor/camera/version.dat
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/init/vendor.somc.hardware.camera.provider@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.somc.hardware.camera.provider.manifest.xml
-vendor/lib64/Camera_QNN/libQnnHtp.so
-vendor/lib64/Camera_QNN/libQnnHtpV73Stub.so
+vendor/lib64/Camera_QNN/libQnnHtp.so;MODULE_SUFFIX=.Camera_QNN
+vendor/lib64/Camera_QNN/libQnnHtpV73Stub.so;MODULE_SUFFIX=.Camera_QNN
 vendor/lib64/camera/components/com.bots.node.vendortagwrite.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
