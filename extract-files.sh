@@ -12,9 +12,14 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "liblog.so" "${2}"
             "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
-        vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so)
+        vendor/etc/libnfc-nci.conf)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
+            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
+            ;;
+        vendor/etc/libnfc-nxp.conf)
+            [ "$2" = "" ] && return 0
+            sed -i "/NXPLOG_\w\+_LOGLEVEL/ s/0x03/0x02/" "${2}"
+            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
             ;;
         *)
             return 1
