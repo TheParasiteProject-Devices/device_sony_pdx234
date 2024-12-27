@@ -49,7 +49,8 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
     SystemDevice=XQ-DQ54 \
     SystemName=XQ-DQ54_EEA \
     BuildFingerprint=Sony/XQ-DQ54_EEA/XQ-DQ54:14/67.1.A.2.307/067001A002030700521143226:user/release-keys \
-    BuildDesc="XQ-DQ54_EEA-user 14 67.1.A.2.307 067001A002030700521143226 release-keys"
+    BuildDesc="XQ-DQ54_EEA-user 14 67.1.A.2.307 067001A002030700521143226 release-keys" \
+    BuildFlavor=sssi-user
 
 PRODUCT_NAME := lineage_pdx234
 PRODUCT_DEVICE := pdx234
