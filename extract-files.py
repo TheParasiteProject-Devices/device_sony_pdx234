@@ -52,6 +52,8 @@ blob_fixups: blob_fixups_user_type = {
         '(NXPLOG_.*_LOGLEVEL)=0x03', '\\0x03=0x02'
     ).regex_replace(
         'NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'
+    ).regex_replace(
+        'NXP_T4T_NFCEE_ENABLE=0x01', 'NXP_T4T_NFCEE_ENABLE=0x00'
     ),
 }
 
