@@ -71,8 +71,8 @@ static const char *device_prop_val[] =
           "Xperia 1 V", "Sony", "XQ-DQ54", nullptr };
 
 void vendor_load_properties() {
-    const char *fingerprint = "Sony/XQ-DQ54_EEA/XQ-DQ54:15/67.2.A.3.2/06700020A003000200521143226:user/release-keys";
-    const char *description = "XQ-DQ54_EEA-user 15 67.2.A.3.2 06700020A003000200521143226 release-keys";
+    const char *fingerprint = "Sony/XQ-DQ54_EEA/XQ-DQ54:15/67.2.A.3.16/067002A003001600521143226:user/release-keys";
+    const char *description = "XQ-DQ54_EEA-user 15 67.2.A.3.16 067002A003001600521143226 release-keys";
 
     full_property_override("build.fingerprint", fingerprint, false);
     full_property_override("build.description", description, false);
