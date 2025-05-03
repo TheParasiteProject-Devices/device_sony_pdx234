@@ -36,6 +36,7 @@ TARGET_GBOARD_KEY_HEIGHT := 1.1
 TARGET_EEA_V2_DEVICE := true
 TARGET_SUPPORTS_DSE_CHOICE_SCREEN := true
 TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_SUPPORTS_DEVICE_AS_MONITOR := true
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
