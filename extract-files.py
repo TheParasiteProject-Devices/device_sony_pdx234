@@ -55,6 +55,10 @@ blob_fixups: blob_fixups_user_type = {
     ).regex_replace(
         'NXP_T4T_NFCEE_ENABLE=0x01', 'NXP_T4T_NFCEE_ENABLE=0x00'
     ),
+    'vendor/lib64/libcammw.so': blob_fixup()
+    .replace_needed(
+        'android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'
+    ),
 }
 
 module = ExtractUtilsModule(
