@@ -30,6 +30,8 @@
 #include <fstream>
 #include <unistd.h>
 #include <vector>
+#include <string>
+#include <sstream>
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
@@ -83,7 +85,18 @@ void vendor_load_properties() {
     }
     full_property_override("build.product", "XQ-DQ54_EEA", false);
 
+    std::string fingerprint_str(fingerprint);
+    std::stringstream ss(fingerprint_str);
+    std::string token;
+    std::vector<std::string> fingerprint_parts;
+    while(std::getline(ss, token, '/')) {
+        fingerprint_parts.push_back(token);
+    }
+
     // Set SOMC specific prop
+    if (fingerprint_parts.size() > 3) {
+        property_override("ro.semc.version.sw_revision", fingerprint_parts[3].c_str());
+    }
     property_override("ro.semc.product.model", GetProperty("ro.product.device", "").c_str());
     property_override("ro.semc.product.name", GetProperty("ro.product.marketname", "").c_str());
     property_override("ro.semc.version.sw_type", GetProperty("ro.build.type", "").c_str());
