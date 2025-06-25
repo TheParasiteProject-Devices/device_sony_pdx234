@@ -22,4 +22,4 @@ The Xperia 1 V (Codenamed "pdx234") is a flagship smartphone from Sony released 
 
 ## Device Picture
 
-![Xperia 1 V](https://i.imgur.com/0BLvh7T.png)
+![Xperia 1 V](https://wiki.lineageos.org/images/devices/pdx234.png)
