@@ -2,3 +2,6 @@
 ro.semc.ms_type_id=PM-1430-BV
 ro.semc.product.device=DQ
 ro.semc.version.sw_variant=GLOBALEEA-A4
+
+# Wifi country code
+ro.boot.wificountrycode=EU
