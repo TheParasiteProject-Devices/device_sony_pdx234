@@ -586,6 +586,10 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
+# Diag (Sony)
+system_ext/bin/usbeng
+system_ext/etc/init/usbeng.rc
+
 # Display (SDM)
 vendor/etc/displayconfig/display_id_131.xml:vendor/etc/displayconfig/display_port_131.xml
 
