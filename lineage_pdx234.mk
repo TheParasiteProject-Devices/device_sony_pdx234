@@ -36,6 +36,7 @@ TARGET_EEA_V2_DEVICE := true
 TARGET_SUPPORTS_DSE_CHOICE_SCREEN := true
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_SUPPORTS_DEVICE_AS_MONITOR := true
+MAINLINE_INCLUDE_BTSERVICES_MODULE := false
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
