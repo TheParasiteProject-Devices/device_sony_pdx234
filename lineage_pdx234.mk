@@ -48,8 +48,8 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
     DeviceProduct=XQ-DQ54_EEA \
     SystemDevice=XQ-DQ54 \
     SystemName=XQ-DQ54_EEA \
-    BuildFingerprint=Sony/XQ-DQ54_EEA/XQ-DQ54:15/67.2.A.3.55/067002A003005500521143226:user/release-keys \
-    BuildDesc="XQ-DQ54_EEA-user 15 67.2.A.3.55 067002A003005500521143226 release-keys" \
+    BuildFingerprint=Sony/XQ-DQ54_EEA/XQ-DQ54:15/67.2.A.3.115/067002A003011500521143226:user/release-keys \
+    BuildDesc="XQ-DQ54_EEA-user 15 67.2.A.3.115 067002A003011500521143226 release-keys" \
     BuildFlavor=sssi-user
 
 PRODUCT_NAME := lineage_pdx234
